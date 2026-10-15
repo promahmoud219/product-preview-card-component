@@ -1,0 +1,6 @@
+@use "_typography.scss" as *;
+
+.hello{
+    @include text-preset(1);
+
+}
