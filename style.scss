@@ -2,21 +2,28 @@
 @use "_spacing.scss" as *;
 @use "_colors.scss" as *;
 @use "_product-preview-card-dimentsions.scss" as *;
+@use "_breakpoints" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
     background: var(--color-cream);
+}
+    
+main{
     width: 100%;
 }
-
-h1, img, p{
-    margin: 0; 
-}
+ 
 
 .product-preview-card{
     border-radius: var(--spacing-100);
     background: var(--color-white);
     overflow: hidden;
-    width: $card-mobile-width;
+    width: min(calc(100% - 2rem), $card-mobile-width);
     margin-block: 80px;
     margin-inline: auto;
 }
@@ -62,7 +69,6 @@ h1, img, p{
 .price {
     display: flex;
     gap: var(--spacing-100);
-    text-align: center;
     align-items: center;
 }
 
@@ -94,4 +100,22 @@ h1, img, p{
 .cta-btn:hover{
     background: var(--color-green-700);
     cursor: pointer;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-preview-card{
+        width: min(calc(100% - 2rem), $card-tablet-width);
+        display: flex; 
+    }
+    .product-preview-card img {
+        width: 50%;
+        background-image: url(./images/image-product-desktop.jpg);
+        // background-position: center;
+    }
 }
