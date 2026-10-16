@@ -181,6 +181,7 @@ main {
   }
   .product-preview-card {
     width: 600px;
+    height: 456px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
