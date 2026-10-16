@@ -28,7 +28,12 @@ main{
     margin-inline: auto;
 }
 
-.product-preview-card img{
+.product-preview-card picture{
+    display: block;
+}
+
+.product-preview-card picture img{
+    display: block;
     width: 100%;
 }
 
@@ -107,14 +112,21 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        
+    }
+    .content{
+        flex-basis: 50%;
     }
     .product-preview-card{
         width: $card-tablet-width;
         display: flex; 
     }
-    .product-preview-card img {
-        width: 50%;
-        background-image: url(./images/favicon-32x32.png);
+    
+    .product-preview-card picture {
+        flex-basis: 50%;
+    }    
+    
+    .product-preview-card picture img {
+        height: 100%;
+        object-fit: cover;
     }
 }
