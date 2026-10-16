@@ -92,9 +92,8 @@ main{
     justify-content: center;
 }
 
-.cta-btn p{ 
+.cta-btn span{ 
     @include typo.text-preset(2);
-
 }
 
 .cta-btn:hover{
@@ -108,14 +107,14 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
     .product-preview-card{
-        width: min(calc(100% - 2rem), $card-tablet-width);
+        width: $card-tablet-width;
         display: flex; 
     }
     .product-preview-card img {
         width: 50%;
-        background-image: url(./images/image-product-desktop.jpg);
-        // background-position: center;
+        background-image: url(./images/favicon-32x32.png);
     }
 }
