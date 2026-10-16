@@ -177,6 +177,7 @@ main {
   .content {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    gap: var(--spacing-400);
   }
   .product-preview-card {
     width: 600px;
