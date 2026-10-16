@@ -53,7 +53,7 @@ main{
 
 .product-category{
     @include typo.text-preset(4);
-
+    text-transform: uppercase;
 }
 
 .product-name{
