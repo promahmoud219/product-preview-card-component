@@ -1,6 +1,97 @@
-@use "_typography.scss" as *;
+@use "_typography.scss" as typo;
+@use "_spacing.scss" as *;
+@use "_colors.scss" as *;
+@use "_product-preview-card-dimentsions.scss" as *;
 
-.hello{
-    @include text-preset(1);
+body{
+    background: var(--color-cream);
+    width: 100%;
+}
 
+h1, img, p{
+    margin: 0; 
+}
+
+.product-preview-card{
+    border-radius: var(--spacing-100);
+    background: var(--color-white);
+    overflow: hidden;
+    width: $card-mobile-width;
+    margin-block: 80px;
+    margin-inline: auto;
+}
+
+.product-preview-card img{
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    padding: var(--spacing-400); 
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.product-category, 
+.product-details,
+.price del{
+    color: var(--color-grey);
+}
+
+.product-category{
+    @include typo.text-preset(4);
+
+}
+
+.product-name{
+    @include typo.text-preset(1);
+    color: var(--color-black);
+}
+
+.product-details{
+    @include typo.text-preset(3);
+
+}
+
+.price {
+    display: flex;
+    gap: var(--spacing-100);
+    text-align: center;
+    align-items: center;
+}
+
+.price strong{
+    @include typo.text-preset(1);
+    color: var(--color-green-500);
+}
+
+.price del{
+    @include typo.text-preset(5);
+}
+
+.cta-btn{
+    gap: var(--spacing-100);
+    border-radius: var(--spacing-100);
+    padding: var(--spacing-200) var(--spacing-400);
+    background: var(--color-green-500);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-btn p{ 
+    @include typo.text-preset(2);
+
+}
+
+.cta-btn:hover{
+    background: var(--color-green-700);
+    cursor: pointer;
 }
